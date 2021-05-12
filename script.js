@@ -21,7 +21,17 @@ selectionButtons.forEach(selectionButton => {
 
 function makeSelection(selection) {
     const computerSelection = randomSelection();
+    const yourWinner = isWinner(selection, computerSelection);
+    const computerWinner = isWinner(computerSelection, selection);
     console.log(computerSelection);
+}
+
+function addSelectionResult(selection, winner) {
+    
+}
+
+function isWinner(selection, opponentSelection) {
+    return selection.beats === opponentSelection.name;
 }
 
 function randomSelection() {
